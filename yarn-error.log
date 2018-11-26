@@ -1,0 +1,60 @@
+Arguments: 
+  /usr/local/lib/node_modules/node/bin/node /usr/local/bin/yarn run dev
+
+PATH: 
+  /Users/test/.rvm/gems/ruby-2.4.0/bin:/Users/test/.rvm/gems/ruby-2.4.0@global/bin:/Users/test/.rvm/rubies/ruby-2.4.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Xamarin Workbooks.app/Contents/SharedSupport/path-bin:/Users/test/.rvm/bin
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  10.12.0
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "spacex",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js",
+      "server": "nodemon server.js",
+      "client": "yarn start --prefix client",
+      "dev": "concurrently \"yarn run server\" \"yarn run client\""
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "axios": "^0.18.0",
+      "express": "^4.16.4",
+      "express-graphql": "^0.7.1",
+      "graphql": "^14.0.2"
+    },
+    "devDependencies": {
+      "nodemon": "^1.18.6"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: Command failed.
+  Exit code: 127
+  Command: sh
+  Arguments: -c concurrently "yarn run server" "yarn run client"
+  Directory: /Users/test/Desktop/projects 2/spaceX
+  Output:
+  
+      at ProcessTermError.MessageError (/Users/test/.config/yarn/global/node_modules/yarn/lib/cli.js:186:110)
+      at new ProcessTermError (/Users/test/.config/yarn/global/node_modules/yarn/lib/cli.js:226:113)
+      at ChildProcess.<anonymous> (/Users/test/.config/yarn/global/node_modules/yarn/lib/cli.js:30281:17)
+      at ChildProcess.emit (events.js:182:13)
+      at maybeClose (internal/child_process.js:962:16)
+      at Process.ChildProcess._handle.onexit (internal/child_process.js:251:5)
