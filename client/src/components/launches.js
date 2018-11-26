@@ -18,6 +18,13 @@ export class Launches extends Component {
     return (
       <div>
           <h1 className="display-4 my-3">launches</h1>
+          <Query query={LAUNCHES_QUERY}>
+            {
+                ({loading, error, data}) => {
+
+                }
+            }
+          </Query>
       </div>
     )
   }
