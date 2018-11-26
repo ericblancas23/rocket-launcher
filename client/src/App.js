@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
 import Launches  from './components/launches';
+import LaunchItem from './components/LaunchItem';
 import './App.css';
 import logo from './logo.png';
 
