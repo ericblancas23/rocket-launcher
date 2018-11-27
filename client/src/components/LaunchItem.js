@@ -5,7 +5,7 @@ export default function LaunchItem({ launch : {flight_number, mission_name, laun
   return (
     <div className="card card-body mb-3">
       <div className="row">
-        <div className="col=md-9">
+        <div className="col-md-9">
             <h4>Mission: { mission_name }</h4>
             <p>Date: { launch_date_local }</p>
         </div>
