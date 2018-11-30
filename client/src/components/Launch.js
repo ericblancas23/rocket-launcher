@@ -24,10 +24,27 @@ const LAUNCH_QUERY = gql`
 
 export class Launch extends Component {
   render() {
+    let { flight_number } = this.props.params;
+    flight_number = parseInt(flight_number);
     return (
+      <Fragment>
       <div>
-        
+        <Query query={LAUNCH_QUERY} variables={{ flight_number}}>
+            {({ loading, error, data}) => {
+                if(loading) return <h4>...Laoding</h4>;
+                if (error) console.log(error);
+
+                const {
+                    mission_name,
+                    flight_number,
+                    launch_year,
+                    launch_success,
+                    rocket: {rocket_id, rocket_name, rocket_type}
+                } = data.launch;
+            }}
+        </Query>
       </div>
+      </Fragment>
     )
   }
 }
