@@ -58,6 +58,19 @@ export class Launch extends Component {
                   {launch_success ? 'Yes' : 'NO'}
                   </span></li>
                 </ul>
+								
+								<h4 className="my-3">Rocket Details</h4>
+								<ul className="list-group">
+									<li className="list-group-item">Rocket: {rocket_id} </li>
+									<li className="list-group-item">Rocket Type: {rocket_type} </li>
+								</ul>
+
+								<hr />
+								<Link className="btn btn-secondary" to="/">
+									Back
+								</Link>
+                
+
                 </div>
             }}
         </Query>
