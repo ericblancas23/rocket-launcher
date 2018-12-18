@@ -6,9 +6,10 @@ import Launch from './components/Launch';
 import Launches  from './components/launches';
 import logo from './logo.png';
 
+//client variable to host apollo
 const client = new ApolloClient({
   uri: 'http://localhost:4000/graphql'
-})
+});
 
 class App extends Component {
   render() {
@@ -23,7 +24,7 @@ class App extends Component {
       </Router>
       </ApolloProvider>
     );
-  }
-}
+  };
+};
 
 export default App;
